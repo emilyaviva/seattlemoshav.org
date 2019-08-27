@@ -14,13 +14,15 @@ export default () => {
       }
     }
   `)
-  return <Img
-    fixed={data.file.childImageSharp.fixed}
-    style={{
-      backgroundColor: `rgb(253, 250, 235)`,
-      borderRadius: `3%`,
-      border: `3px solid black`
-    }}
-    alt="Seattle Moshav Logo"
-  />
+  return (
+    <Img
+      fixed={data.file.childImageSharp.fixed}
+      style={{
+        backgroundColor: `rgb(253, 250, 235)`,
+        borderRadius: `3%`,
+        border: `3px solid black`
+      }}
+      alt="Seattle Moshav Logo"
+    />
+  )
 }

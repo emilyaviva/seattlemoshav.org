@@ -8,13 +8,15 @@ const typography = new Typography({
     "Helvetica Neue",
     "Helvetica",
     "Arial",
-    "sans-serif",
+    "sans-serif"
   ],
   bodyFontFamily: ["Georgia", "serif"],
-  googleFonts: [{
-    name: 'Titillium Web',
-    styles: ['700']
-  }]
+  googleFonts: [
+    {
+      name: "Titillium Web",
+      styles: ["700"]
+    }
+  ]
 })
 
 if (process.env.NODE_ENV !== `production`) {

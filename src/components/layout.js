@@ -8,40 +8,39 @@ import SiteFooter from "./site-footer"
 import "./layout.css"
 
 const Layout = ({ className, children }) => (
-  <StaticQuery query={graphql`
-    query {
-      desktop: file(relativePath: { eq: "seattle-unsplash.jpg" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_withWebp
+  <StaticQuery
+    query={graphql`
+      query {
+        desktop: file(relativePath: { eq: "seattle-unsplash.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
           }
         }
       }
-    }
-  `}
-  
-  render={data => {
-    const imageData = data.desktop.childImageSharp.fluid
-    return (
-      <BackgroundImage
-        Tag="div"
-        className={className}
-        fluid={imageData}
-        backgroundColor={`#040e18`}
-      >
-        <SiteHeader />
-        <main>{children}</main>
-        <SiteFooter />
-      </BackgroundImage>
-    )
-  }}
-
+    `}
+    render={data => {
+      const imageData = data.desktop.childImageSharp.fluid
+      return (
+        <BackgroundImage
+          Tag="div"
+          className={className}
+          fluid={imageData}
+          backgroundColor={`#040e18`}
+        >
+          <SiteHeader />
+          <main>{children}</main>
+          <SiteFooter />
+        </BackgroundImage>
+      )
+    }}
   />
 )
 
 Layout.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 Layout.defaultProps = {
