@@ -1,0 +1,36 @@
+footer {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid black;
+  left: 0;
+  bottom: 0;
+  height: 30;
+  width: 100%;
+  background: black;
+  color: white;
+}
+
+p {
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin: 0.5rem 1.2rem;
+  vertical-align: middle;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
