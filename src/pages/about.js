@@ -6,10 +6,9 @@ import SEO from "../components/seo"
 
 export default () => (
   <Layout>
-    <SEO title="Blog" />
-    <h1>Blog…</h1>
-    <p>There will eventually be a blog here, I promise.</p>
+    <SEO title="About Us" />
+    <h1>There's nothing here yet…</h1>
+    <p>Welcome to page 2</p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
-

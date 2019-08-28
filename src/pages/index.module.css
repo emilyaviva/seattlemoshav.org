@@ -7,11 +7,20 @@ main {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
+}
+
+h1, h2 {
+  color: black;
+  /* text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; */
 }
 
 nav {
