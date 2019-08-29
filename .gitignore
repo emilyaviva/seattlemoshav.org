@@ -70,4 +70,4 @@ yarn-error.log
 
 # Aerobatic
 .aero-debug.log
-aerobatic-deploy.tar.gz
+aero-deploy.tar.gz
