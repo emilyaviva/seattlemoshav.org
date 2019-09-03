@@ -14,9 +14,11 @@
   },
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby clean && gatsby build && aero deploy --directory public",
+    "dev": "gatsby develop",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn run develop",
     "serve": "gatsby serve",
     "test": "echo \"No tests written yet.\""
   },
@@ -41,6 +43,7 @@
     "typography": "^0.16.19"
   },
   "devDependencies": {
+    "aerobatic-cli": "^2.1.3",
     "prettier": "1.18.2"
   }
 }
