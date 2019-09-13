@@ -16,11 +16,12 @@ export default () => {
   `)
   return (
     <Img
+      className="is-centered"
       fixed={data.file.childImageSharp.fixed}
       style={{
         backgroundColor: `rgb(253, 250, 235)`,
         borderRadius: `3%`,
-        border: `3px solid black`
+        border: `3px solid black`,
       }}
       alt="Seattle Moshav Logo"
     />

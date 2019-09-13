@@ -5,34 +5,42 @@ import Layout from "../components/layout"
 import LogoImage from "../components/logo-image"
 import SEO from "../components/seo"
 
-import indexStyles from "./index.module.css"
+// import indexStyles from "./index.module.css"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Seattle Moshav" />
-    <main className={indexStyles.main}>
-      <h1 className={indexStyles.h1}>Seattle Moshav</h1>
-      <h2 className={indexStyles.h2}>
-        A Cohousing Community with a Jewish Heart
-      </h2>
-      <nav className={indexStyles.nav}>
-        <ul className={indexStyles.ul}>
-          <Link to="/about">
-            <li>About Us</li>
-          </Link>
-          <Link to="/blog">
-            <li>Blog</li>
-          </Link>
-          <Link to="/cohousing-faq">
-            <li>Cohousing FAQ</li>
-          </Link>
-          <Link to="/contact">
-            <li>Keep In Touch</li>
-          </Link>
-        </ul>
-      </nav>
-      <LogoImage className={indexStyles.logoImage} />
-    </main>
+    <h1 className="title is-1 has-text-centered">
+      Seattle Moshav
+    </h1>
+    <h2 className="subtitle is-3 has-text-centered">
+      A Cohousing Community with a Jewish Heart
+    </h2>
+    <nav className="columns">
+      <div className="column">
+        <Link className="button is-medium is-link is-fullwidth" to="/about">
+          About Us
+        </Link>
+      </div>
+      <div className="column">
+        <Link className="button is-medium is-link is-fullwidth" to="/blog">
+          Blog
+        </Link>
+      </div>
+      <div className="column">
+        <Link className="button is-medium is-link is-fullwidth" to="/cohousing-faq">
+          Cohousing FAQ
+        </Link>
+      </div>
+      <div className="column">
+        <Link className="button is-medium is-link is-fullwidth" to="/contact">
+          Keep In Touch
+        </Link>
+      </div>
+    </nav>
+    <div className="columns is-mobile is-centered">
+      <LogoImage className="column is-full" />
+    </div>
   </Layout>
 )
 

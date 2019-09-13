@@ -5,7 +5,7 @@ import BackgroundImage from "gatsby-background-image"
 
 import SiteHeader from "./site-header"
 import SiteFooter from "./site-footer"
-import "./layout.css"
+import "./layout.scss"
 
 const Layout = ({ className, children }) => (
   <StaticQuery
@@ -30,7 +30,9 @@ const Layout = ({ className, children }) => (
           backgroundColor={`#040e18`}
         >
           <SiteHeader />
-          <main>{children}</main>
+          <main className="container is-fluid">
+            {children}
+          </main>
           <SiteFooter />
         </BackgroundImage>
       )
