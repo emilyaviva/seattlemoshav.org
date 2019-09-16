@@ -28,6 +28,7 @@ const Layout = ({ className, children }) => (
           className={className}
           fluid={imageData}
           backgroundColor={`#040e18`}
+          width="100%"
         >
           <SiteHeader />
           <main className="container is-fluid">
