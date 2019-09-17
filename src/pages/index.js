@@ -20,9 +20,9 @@ const IndexPage = () => (
     <div style={{ padding: `3rem 0` }} />
     <nav className="columns">
       <div className="column">
-        <Link className="button is-medium is-link is-fullwidth" to="/about">
+        <a className="button is-medium is-link is-fullwidth" href="https://www.urbanmoshav.org/seattle-faq.html">
           About Us
-        </Link>
+        </a>
       </div>
       <div className="column">
         <Link className="button is-medium is-link is-fullwidth" to="/blog">
@@ -30,9 +30,9 @@ const IndexPage = () => (
         </Link>
       </div>
       <div className="column">
-        <Link className="button is-medium is-link is-fullwidth" to="/cohousing-faq">
-          Cohousing FAQ
-        </Link>
+        <a className="button is-medium is-link is-fullwidth" href="https://www.cohousing.org/what-cohousing/cohousing/">
+          About Cohousing
+        </a>
       </div>
       <div className="column">
         <Link className="button is-medium is-link is-fullwidth" to="/contact">
