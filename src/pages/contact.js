@@ -5,6 +5,16 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+let recaptchaInstance
+
+const executeCaptcha = () => {
+  recaptchaInstance.execute()
+}
+
+const verifyCallback = (response) => {
+  document.getElementById("contact-form").submit()
+}
+
 export default () => (
   <Layout>
     <SEO title="Contact Us" />
@@ -46,13 +56,18 @@ export default () => (
         </div>
         <div className="field is-grouped">
           <div className="control">
-            <button className="button is-link">Submit</button>
+            <button className="button is-link" onClick={executeCaptcha}>Submit</button>
           </div>
           <div className="control">
             <Link className="button is-link" to="/">Cancel</Link>
           </div>
         </div>
-        <Recaptcha sitekey="6LcSA7kUAAAAABAn-GdEj9CM4ZE3lun0frlyCiN6" />
+        <Recaptcha
+          sitekey="6LcSA7kUAAAAABAn-GdEj9CM4ZE3lun0frlyCiN6"
+          ref={e => recaptchaInstance = e}
+          size="invisible"
+          verifyCallback={verifyCallback}
+        />
       </form>
     </div>
   </Layout>
