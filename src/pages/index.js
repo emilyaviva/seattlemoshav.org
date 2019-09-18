@@ -10,14 +10,14 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Seattle Moshav" />
-    <div style={{ padding: `2rem 0` }} />
+    <div className="is-hidden-mobile" style={{ padding: `2rem 0` }} />
     <h1 className="title is-1 has-text-centered">
       Seattle Moshav
     </h1>
     <h2 className="subtitle is-3 has-text-centered">
       A Cohousing Community with a Jewish Heart
     </h2>
-    <div style={{ padding: `3rem 0` }} />
+    <div className="is-hidden-mobile" style={{ padding: `3rem 0` }} />
     <nav className="columns">
       <div className="column">
         <a className="button is-medium is-link is-fullwidth" href="https://www.urbanmoshav.org/seattle-faq.html">
@@ -40,7 +40,7 @@ const IndexPage = () => (
         </Link>
       </div>
     </nav>
-    <div style={{ padding: `4rem 0` }} />
+    <div className="is-hidden-mobile" style={{ padding: `4rem 0` }} />
     <div className="columns is-mobile is-centered">
       <LogoImage className="column is-full" />
     </div>
