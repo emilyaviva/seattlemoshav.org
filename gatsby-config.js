@@ -5,6 +5,7 @@ module.exports = {
     author: `@seattlemoshav`
   },
   plugins: [
+    `gatsby-plugin-recaptcha`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {

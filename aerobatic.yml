@@ -4,3 +4,14 @@ deploy:
   directory: .
 plugins:
   - name: webpage
+  - name: form-submit
+    path: /contact
+    method: post
+    options:
+      formName: contact-form
+      redirectUrl: /thank-you
+      recaptchaSecret: $RECAPTCHA_SECRET_KEY
+      targets:
+        - name: email
+          subject: Website contact request
+          recipients: [info@seattlemoshav.org]

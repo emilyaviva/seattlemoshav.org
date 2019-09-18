@@ -5683,6 +5683,13 @@ gatsby-plugin-react-helmet@^3.1.7:
   dependencies:
     "@babel/runtime" "^7.6.0"
 
+gatsby-plugin-recaptcha@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-recaptcha/-/gatsby-plugin-recaptcha-1.0.5.tgz#d3ab783957d6549cfa157b230714136c58ab5319"
+  integrity sha512-qPAuixqmVVHDhag8lUUpOxQY/R9MVDH9PmLlGWvUQNDeNQOXtJe1r5TAzl0QAGg4x8lR2UZre03nnKizHuDbrA==
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-sass@^2.1.14:
   version "2.1.14"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.1.14.tgz#16c21f9bfdded165c5bd0f7b46b6ff6f1801d627"
@@ -10632,6 +10639,11 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-recaptcha@^2.3.10:
+  version "2.3.10"
+  resolved "https://registry.yarnpkg.com/react-recaptcha/-/react-recaptcha-2.3.10.tgz#1f7a001f24ab7e1a323fcf1fd8644afecb56f7da"
+  integrity sha512-IyanbozsYCuHvTYDuskZTIEcRAMG/sdvAu5b29iQWoC8Kd3Zk9WGCv2oNxh6RfGHvSvgHAyaLjmC6ei/yMsJ7g==
 
 react-reconciler@^0.20.0:
   version "0.20.4"
