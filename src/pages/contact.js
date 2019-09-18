@@ -14,9 +14,9 @@ export default class Contact extends React.Component {
   }
 
   verifyCallback = response => {
-    console.log(response)
     // Drop the submitted attribute from the component state
     const { submitted, ...formContent } = this.state
+    formContent['g-recaptcha-response'] = response
     axios({
       method: "post",
       url: "/contact-form-submit-ajax",
