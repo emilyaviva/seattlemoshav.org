@@ -4,12 +4,11 @@ deploy:
   directory: .
 plugins:
   - name: form-submit
-    path: /contact-form
+    path: /contact-form-submit-ajax
     method: post
     options:
       formName: contact-form
-      redirectUrl: /thank-you
-      recaptchaSecret: $RECAPTCHA_SECRET_KEY
+      recaptchaSecret: $CONTACT_FORM_RECAPTCHA_KEY
       targets:
         - name: email
           subject: Website contact request

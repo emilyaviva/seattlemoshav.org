@@ -13,8 +13,23 @@ export default class Contact extends React.Component {
     this.recaptchaInstance.execute()
   }
 
-  verifyCallback = () => {
-    document.getElementById("contact-form").submit()
+  verifyCallback = response => {
+    console.log(response)
+    // Drop the submitted attribute from the component state
+    const { submitted, ...formContent } = this.state
+    axios({
+      method: "post",
+      url: "/contact-form-submit-ajax",
+      data: formContent,
+      headers: { "Accept": "application/json" }
+    })
+    .then(() => {
+      this.setState({ submitted: true })
+      alert(`Your message has been sent. Name: ${formContent.name}, Email: ${formContent.email}, Message: ${formContent.message}, Subscribe? ${formContent.subscribed}`)
+    })
+    .catch(error => {
+      console.error(error)
+    })
   }
 
   state = {
@@ -44,26 +59,6 @@ export default class Contact extends React.Component {
     })
   }
 
-  handleSubmit = e => {
-    e.preventDefault()
-    // Drop the submitted attribute from the component state
-    const { submitted, ...formContent } = this.state
-    formContent['g-captcha-response'] = document.getElementById('g-captcha-response').value
-    axios({
-      method: "post",
-      url: "/contact-form",
-      data: formContent,
-      headers: { "Accept": "application/json" }
-    })
-    .then(response => {
-      this.setState({ submitted: true })
-      alert(`Your message has been sent. Name: ${formContent.name}, Email: ${formContent.email}, Message: ${formContent.message}, Subscribe? ${formContent.subscribed}`)
-    })
-    .catch(error => {
-      console.error(error)
-    })
-  }
-
   render () {
     return (
       <Layout>
@@ -73,7 +68,7 @@ export default class Contact extends React.Component {
         <div className="columns">
           <form
             className="column is-half is-offset-one-quarter"
-            onSubmit={this.handleSubmit}
+            onSubmit={this.executeCaptcha}
             method="post"
             id="contact-form"
             style={{ visibility: this.state.submitted ? `hidden` : `block`, background: `cornsilk`, borderRadius: `3px`, border: `2px solid black` }}
@@ -110,7 +105,7 @@ export default class Contact extends React.Component {
               <label className="label">Message</label>
               <div className="control">
                 <textarea
-                  class="textarea"
+                  className="textarea"
                   name="message"
                   placeholder="Optional message"
                   value={this.state.message}
@@ -120,7 +115,7 @@ export default class Contact extends React.Component {
             </div>
             <div className="field">
               <div className="control">
-                <label class="checkbox">
+                <label className="checkbox">
                   <input
                     type="checkbox"
                     name="subscribe"
@@ -133,7 +128,7 @@ export default class Contact extends React.Component {
             </div>
             <div className="field is-grouped">
               <div className="control">
-                <button className="button is-link" type="submit" onClick={this.handleSubmit}>Submit</button>
+                <button className="button is-link" type="submit" onClick={this.executeCaptcha}>Submit</button>
               </div>
               <div className="control">
                 <button className="button is-link" type="reset" onClick={this.resetForm}>Clear</button>
