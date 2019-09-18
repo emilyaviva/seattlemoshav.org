@@ -1,4 +1,5 @@
 import React from "react"
+import Recaptcha from "react-recaptcha"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -51,6 +52,7 @@ export default () => (
             <Link className="button is-link" to="/">Cancel</Link>
           </div>
         </div>
+        <Recaptcha sitekey="6LcSA7kUAAAAABAn-GdEj9CM4ZE3lun0frlyCiN6" />
       </form>
     </div>
   </Layout>
