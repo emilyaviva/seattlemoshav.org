@@ -24,11 +24,11 @@ const IndexPage = () => (
           About Us
         </a>
       </div>
-      <div className="column">
+      {/*<div className="column">
         <Link className="button is-medium is-link is-fullwidth" to="/blog">
           Blog
         </Link>
-      </div>
+      </div>*/}
       <div className="column">
         <a className="button is-medium is-link is-fullwidth" href="https://www.cohousing.org/what-cohousing/cohousing/">
           About Cohousing

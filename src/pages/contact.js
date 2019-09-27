@@ -24,7 +24,7 @@ export default class Contact extends React.Component {
       headers: { "Accept": "application/json" }
     })
     .then(() => {
-      this.setState({ submitted: true })
+      // this.setState({ submitted: true })
       alert(`Your message has been sent. Name: ${formContent.name}, Email: ${formContent.email}, Message: ${formContent.message}, Subscribe? ${formContent.subscribed}`)
     })
     .catch(error => {
@@ -37,7 +37,7 @@ export default class Contact extends React.Component {
     email: "",
     message: "",
     subscribed: false,
-    submitted: false
+    // submitted: false
   }
 
   handleInputChange = e => {
@@ -55,7 +55,7 @@ export default class Contact extends React.Component {
       email: "",
       message: "",
       subscribed: false,
-      submitted: false
+      // submitted: false
     })
   }
 
@@ -71,7 +71,7 @@ export default class Contact extends React.Component {
             onSubmit={this.executeCaptcha}
             method="post"
             id="contact-form"
-            style={{ visibility: this.state.submitted ? `hidden` : `block`, background: `cornsilk`, borderRadius: `3px`, border: `2px solid black` }}
+            style={{ background: `cornsilk`, borderRadius: `3px`, border: `2px solid black` }}
           >
             <div className="field">
               <label className="label">Name</label>
