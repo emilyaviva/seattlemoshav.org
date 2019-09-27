@@ -118,7 +118,8 @@ export default class Contact extends React.Component {
                 <label className="checkbox">
                   <input
                     type="checkbox"
-                    name="subscribe"
+                    name="subscribed"
+                    checked="checked"
                     value={this.state.subscribed}
                     onChange={this.handleInputChange}
                   />
