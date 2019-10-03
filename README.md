@@ -14,3 +14,10 @@ To build:
 ```
 $ yarn run build
 ```
+
+We are currently using [Aerobatic](https://www.aerobatic.com) for static hosting. To deploy:
+
+```
+$ yarn run deploy
+```
+This uses the `aerobatic-cli` npm package.
